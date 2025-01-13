@@ -1,0 +1,162 @@
+
+/*@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&display=swap');*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+main{
+    width: 500px;
+    height: 500px;
+}
+
+.areajuego{
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 80%;
+    justify-content: stretch;
+    font-size: 5pc;
+}
+
+.cuadrado{
+    color: white;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+.cuadrado:hover{
+    color: black;
+}
+
+.bar{
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 2em;
+    margin-top: 1em;
+}
+
+.status{
+    margin-top: 20px;
+    background: black;
+    color: white;
+    text-align: center;
+}
+
+h3{
+    color: #E5FF00;
+    font-family: "Mochiy Pop One", sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.accion{
+    display: flex;
+    justify-content: center;
+    padding: 3em;
+}
+
+button{
+padding: 15px 32px;
+color: black;
+background-color: #00ff95;
+font-family: "Mochiy Pop One", sans-serif;
+border: #181818;
+transition-duration: 0.4s;
+}
+
+button:hover{
+    background-color: #00ff95;
+    color: white;
+    cursor: pointer;
+}
+
+#ganadasX,#winner,
+#ganadasY,#empates{
+    font-family: "Mochiy Pop One", sans-serif;
+}
+
+/* Animaciones al dar click al cuadro */
+.cuadrado {
+    transition: transform 0.3s, color 0.3s;
+}
+.cuadrado:active {
+    transform: scale(0.95);
+    color: gold;
+}
+
+/* Cambiar la opacidad de los cuadros para un efecto más dinámico */
+.cuadrado {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+.cuadrado:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    color: black;
+}
+
+/* Estilo para el cursor cuando el jugador es "X" */
+/* Cursor con "X" */
+.x-cursor {
+    cursor: none; /* El cursor original desaparece */
+}
+
+.x-cursor::after {
+    content: "X";
+    font-size: 30px;
+    color: red;
+    position: absolute;
+    top: -10px; /* Ajusta según necesites */
+    left: -10px; /* Ajusta según necesites */
+    pointer-events: none; /* Evita interferencias con clics */
+}
+
+/* Cursor con "O" */
+.o-cursor {
+    cursor: none; /* El cursor original desaparece */
+}
+
+.o-cursor::after {
+    content: "O";
+    font-size: 30px;
+    color: blue;
+    position: absolute;
+    top: -10px; /* Ajusta según necesites */
+    left: -10px; /* Ajusta según necesites */
+    pointer-events: none; /* Evita interferencias con clics */
+}
+
+
+
+
+
+
+
